@@ -48,6 +48,7 @@ class IPInfo
      */
     public function getDetails($ip_address = null)
     {
+        $this->debug_to_console("Test");
         try {
             $responseDetails = $this->getRequestDetails((string) $ip_address);
         } catch (\Exception $e) {
@@ -55,6 +56,14 @@ class IPInfo
         }
 
         return $this->formatDetailsObject($responseDetails);
+    }
+
+   public function debug_to_console($data) {
+        $output = $data;
+        if (is_array($output))
+            $output = implode(',', $output);
+    
+        echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
     }
 
     /**
