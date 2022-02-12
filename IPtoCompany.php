@@ -5,7 +5,7 @@
  * Description: Get the name of the companies that visit your website.
  * Author: Marvin Aziz
  * Author URI: https://github.com/Romain/Matomo-IP-to-Company
- * Version: 1.0.2
+ * Version: 1.0.3
  */
 ?><?php
 /**
